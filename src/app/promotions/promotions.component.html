@@ -9,8 +9,8 @@
       <p>Prix promotionnel : <strong>{{ promo.promoPrice | currency }}</strong></p>
     </mat-card-content>
     <mat-card-footer>
-      <!-- <mat-badge *ngIf="promo.isNew" color="primary" content="NOUVEAU"></mat-badge>
-      <mat-badge *ngIf="!promo.isNew" color="accent" content="PROMO"></mat-badge> -->
+      <div *ngIf="promo.isNew" matBadge="NOUVEAU" matBadgeColor="primary"></div>
+      <div *ngIf="!promo.isNew" matBadge="PROMO" matBadgeColor="accent"></div>
     </mat-card-footer>
     <mat-card-actions>
       <button mat-raised-button color="primary">Voir l'offre</button>
