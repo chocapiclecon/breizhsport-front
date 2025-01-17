@@ -1,0 +1,12 @@
+<section class="categories">
+    <h2 class="section-title">Catégories</h2>
+    <mat-grid-list cols="4" rowHeight="1:1">
+      <mat-grid-tile *ngFor="let category of categories">
+        <div class="category-item" [style.backgroundImage]="'url(' + category.image + ')'">
+          <h3>{{ category.name }}</h3>
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </section>
+  
+  

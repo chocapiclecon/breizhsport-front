@@ -1,0 +1,19 @@
+<div class="promotions-container">
+  <mat-card *ngFor="let promo of promotions" class="promotion-card">
+    <img mat-card-image [src]="promo.image" [alt]="promo.name" />
+    <mat-card-content>
+      <h3>{{ promo.name }}</h3>
+      <p>
+        Prix original : <s>{{ promo.originalPrice | currency }}</s>
+      </p>
+      <p>Prix promotionnel : <strong>{{ promo.promoPrice | currency }}</strong></p>
+    </mat-card-content>
+    <mat-card-footer>
+      <!-- <mat-badge *ngIf="promo.isNew" color="primary" content="NOUVEAU"></mat-badge>
+      <mat-badge *ngIf="!promo.isNew" color="accent" content="PROMO"></mat-badge> -->
+    </mat-card-footer>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Voir l'offre</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
